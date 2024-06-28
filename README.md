@@ -1,2 +1,3 @@
 # FinFindr
-FinFindr is a lightweight application to compare points and cashback for between all your credits to see which card is most benefical to use in each scenario
+FinFindr is an application for users who struggle balancing all of their credit options. FinFindr makes it easier for users to know which credit card would be most useful at any vendor.
+
