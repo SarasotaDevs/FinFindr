@@ -14,7 +14,7 @@ Tracks Daily/Weekly/Monthly/Yearly expendatures
 Budgetting Functioanlity 
 
 # Backend Tech Stack
-.Net
+.Net (Backend)
 OpenAI (Text Interpretter)
 Docker (Containerization)
 Gitlab Actions (CI/CD)
