@@ -15,16 +15,17 @@ Budgetting Functioanlity
 
 # Backend Tech Stack
 .Net
-OpenAI (Text I)
+OpenAI (Text Interpretter)
 Docker (Containerization)
 Gitlab Actions (CI/CD)
-Apollo GraphQl (API)
+Apollo GraphQl (API Assistance)
 Auth0 (User Auth)
 Amazon S3 (DB)
 Amazon CloudWatch (Metric Generator)
-Swagger (API Docs)
-AWS EC2 (Web Hosting)
 Grafana (Health Metrics)
+Swagger (API Docs)
+OpenAPI (Additional API documentation)
+AWS EC2 (Web Hosting)
 Kubernetes (Scaliability)
 
 # Frontend Tech Stack
