@@ -2,4 +2,4 @@ cd server
 
 cd finfindr-server
 
-dotnet run
+docker build -t finfindr-server .

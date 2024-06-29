@@ -34,7 +34,10 @@ app.MapGet("/weatherforecast", () =>
     return forecast;
 })
 .WithName("GetWeatherForecast")
-.WithOpenApi();
+.WithOpenApi(option => {
+    option.Summary = "Hello World";
+    return option;
+});
 
 app.Run();
 

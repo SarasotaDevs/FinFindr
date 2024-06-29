@@ -7,7 +7,7 @@ RUN dotnet publish -c Release -o out
 
 # Runtime stage
 FROM mcr.microsoft.com/dotnet/aspnet:8.0
-ENV ASPNETCORE_ENVIRONMENT=Development  
-WORKDIR /apps
+ENV ASPNETCORE_ENVIRONMENT=Development
+WORKDIR /app
 COPY --from=build-env /app/out ./
 CMD ["dotnet", "server.dll"]
