@@ -6,11 +6,12 @@ This application plans on doing the following:
 # Main Goal
 Check which credit option is most benefical to be used at a time
 Anaylzes credit spent to see missed opportunties for cashback (Total Lost Opprotunity)
+Add expendatures to groups to for spending analysis
+
 
 # Stretch Goals
 Tracks Daily/Weekly/Monthly/Yearly expendatures
 Budgetting Functioanlity 
-Add expendatures to groups to for spending analysis
 
 # Backend Tech Stack
 .Net
