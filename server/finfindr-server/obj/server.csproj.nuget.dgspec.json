@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/maxmartin/FinFindr/server/server/server.csproj": {}
+    "/Users/maxmartin/FinFindr/server/finfindr-server/server.csproj": {}
   },
   "projects": {
-    "/Users/maxmartin/FinFindr/server/server/server.csproj": {
+    "/Users/maxmartin/FinFindr/server/finfindr-server/server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/maxmartin/FinFindr/server/server/server.csproj",
+        "projectUniqueName": "/Users/maxmartin/FinFindr/server/finfindr-server/server.csproj",
         "projectName": "server",
-        "projectPath": "/Users/maxmartin/FinFindr/server/server/server.csproj",
+        "projectPath": "/Users/maxmartin/FinFindr/server/finfindr-server/server.csproj",
         "packagesPath": "/Users/maxmartin/.nuget/packages/",
-        "outputPath": "/Users/maxmartin/FinFindr/server/server/obj/",
+        "outputPath": "/Users/maxmartin/FinFindr/server/finfindr-server/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/maxmartin/.nuget/NuGet/NuGet.Config"

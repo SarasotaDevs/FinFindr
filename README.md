@@ -6,7 +6,7 @@ This application plans on doing the following:
 # Main Goal
 Check which credit option is most benefical to be used at a time
 Anaylzes credit spent to see missed opportunties for cashback (Total Lost Opprotunity)
-Add expendatures to groups to for spending analysis
+Add expendatures to groups to for spending analysis using Publish and Subscribe Technology
 
 
 # Stretch Goals
@@ -27,6 +27,7 @@ Swagger (API Docs)
 OpenAPI (Additional API documentation)
 AWS EC2 (Web Hosting)
 Kubernetes (Scaliability)
+Google Cloud (Pub/Sub)
 
 # Frontend Tech Stack
 A Nuxt Builder (figuring it out)
