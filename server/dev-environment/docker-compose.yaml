@@ -1,8 +1,8 @@
-version: '3.8'  # Use a suitable version for your needs
+version: '3.8' 
 
 services:
   finfindr-server:
-    image: finfindr-server  # Use your custom image name
+    image: finfindr-server
     container_name: finfindr-server
     ports:
-      - "8080:8080"  # Map port 5200 inside the container to port 8000 on the host
+      - "8080:8080"
