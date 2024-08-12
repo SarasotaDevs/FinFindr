@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "OfJ2qvkd6yc3EBQf6Gst5UBXAfC1rvoVNPozYejwnmc=",
+  "Source": "FinFindrServer",
+  "BasePath": "_content/FinFindrServer",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

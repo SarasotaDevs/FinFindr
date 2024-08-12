@@ -1,0 +1,6 @@
+@FinFindrServer_HostAddress = http://localhost:5030
+
+GET {{FinFindrServer_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
