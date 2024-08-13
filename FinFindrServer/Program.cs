@@ -1,4 +1,5 @@
 using Microsoft.Extensions.DependencyInjection;
+using OpenAI;
 
 var builder = WebApplication.CreateBuilder(args);
 

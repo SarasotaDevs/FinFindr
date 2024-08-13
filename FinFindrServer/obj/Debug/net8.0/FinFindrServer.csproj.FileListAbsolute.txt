@@ -32,3 +32,6 @@
 /Users/maxmartin/projects/FinFindr/FinFindrServer/obj/Debug/net8.0/FinFindrServer.pdb
 /Users/maxmartin/projects/FinFindr/FinFindrServer/obj/Debug/net8.0/FinFindrServer.genruntimeconfig.cache
 /Users/maxmartin/projects/FinFindr/FinFindrServer/obj/Debug/net8.0/ref/FinFindrServer.dll
+/Users/maxmartin/projects/FinFindr/FinFindrServer/bin/Debug/net8.0/OpenAI.dll
+/Users/maxmartin/projects/FinFindr/FinFindrServer/bin/Debug/net8.0/System.ClientModel.dll
+/Users/maxmartin/projects/FinFindr/FinFindrServer/bin/Debug/net8.0/System.Memory.Data.dll

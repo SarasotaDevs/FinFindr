@@ -10,6 +10,7 @@
         "dependencies": {
           "Microsoft.AspNetCore.OpenApi": "8.0.6",
           "Microsoft.Extensions.DependencyInjection": "8.0.0",
+          "OpenAI": "2.0.0-beta.8",
           "Swashbuckle.AspNetCore": "6.4.0"
         },
         "runtime": {
@@ -39,6 +40,17 @@
           "lib/netstandard2.0/Microsoft.OpenApi.dll": {
             "assemblyVersion": "1.4.3.0",
             "fileVersion": "1.4.3.0"
+          }
+        }
+      },
+      "OpenAI/2.0.0-beta.8": {
+        "dependencies": {
+          "System.ClientModel": "1.1.0-beta.5"
+        },
+        "runtime": {
+          "lib/net6.0/OpenAI.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
           }
         }
       },
@@ -79,7 +91,33 @@
             "fileVersion": "6.4.0.0"
           }
         }
-      }
+      },
+      "System.ClientModel/1.1.0-beta.5": {
+        "dependencies": {
+          "System.Memory.Data": "1.0.2",
+          "System.Text.Json": "4.7.2"
+        },
+        "runtime": {
+          "lib/net6.0/System.ClientModel.dll": {
+            "assemblyVersion": "1.1.0.0",
+            "fileVersion": "1.100.24.36109"
+          }
+        }
+      },
+      "System.Memory.Data/1.0.2": {
+        "dependencies": {
+          "System.Text.Encodings.Web": "4.7.2",
+          "System.Text.Json": "4.7.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Memory.Data.dll": {
+            "assemblyVersion": "1.0.2.0",
+            "fileVersion": "1.0.221.20802"
+          }
+        }
+      },
+      "System.Text.Encodings.Web/4.7.2": {},
+      "System.Text.Json/4.7.2": {}
     }
   },
   "libraries": {
@@ -123,6 +161,13 @@
       "path": "microsoft.openapi/1.4.3",
       "hashPath": "microsoft.openapi.1.4.3.nupkg.sha512"
     },
+    "OpenAI/2.0.0-beta.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-IMSel7m7EVOb84urNH0WQPQ8xFXnveYaZm6u6Eou7W0lbXX1Rwr/FDBMxK8wg55Gtx3j13a/iMyxCG8JR8mGGg==",
+      "path": "openai/2.0.0-beta.8",
+      "hashPath": "openai.2.0.0-beta.8.nupkg.sha512"
+    },
     "Swashbuckle.AspNetCore/6.4.0": {
       "type": "package",
       "serviceable": true,
@@ -150,6 +195,34 @@
       "sha512": "sha512-1Hh3atb3pi8c+v7n4/3N80Jj8RvLOXgWxzix6w3OZhB7zBGRwsy7FWr4e3hwgPweSBpwfElqj4V4nkjYabH9nQ==",
       "path": "swashbuckle.aspnetcore.swaggerui/6.4.0",
       "hashPath": "swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512"
+    },
+    "System.ClientModel/1.1.0-beta.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6YP3qvWGkSvvK838pWpEcuWi4ibSf8fP3Q8OEovRfIoO6BK6Xvp9VyBjt/Tjdyq//JU0aQBhgxH/vQ95W7LQ5g==",
+      "path": "system.clientmodel/1.1.0-beta.5",
+      "hashPath": "system.clientmodel.1.1.0-beta.5.nupkg.sha512"
+    },
+    "System.Memory.Data/1.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-JGkzeqgBsiZwKJZ1IxPNsDFZDhUvuEdX8L8BDC8N3KOj+6zMcNU28CNN59TpZE/VJYy9cP+5M+sbxtWJx3/xtw==",
+      "path": "system.memory.data/1.0.2",
+      "hashPath": "system.memory.data.1.0.2.nupkg.sha512"
+    },
+    "System.Text.Encodings.Web/4.7.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-iTUgB/WtrZ1sWZs84F2hwyQhiRH6QNjQv2DkwrH+WP6RoFga2Q1m3f9/Q7FG8cck8AdHitQkmkXSY8qylcDmuA==",
+      "path": "system.text.encodings.web/4.7.2",
+      "hashPath": "system.text.encodings.web.4.7.2.nupkg.sha512"
+    },
+    "System.Text.Json/4.7.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-TcMd95wcrubm9nHvJEQs70rC0H/8omiSGGpU4FQ/ZA1URIqD4pjmFJh2Mfv1yH1eHgJDWTi2hMDXwTET+zOOyg==",
+      "path": "system.text.json/4.7.2",
+      "hashPath": "system.text.json.4.7.2.nupkg.sha512"
     }
   }
 }
