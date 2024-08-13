@@ -37,3 +37,7 @@
 /Users/maxmartin/projects/FinFindr/FinFindrServer/bin/Debug/net8.0/System.Memory.Data.dll
 /Users/maxmartin/projects/FinFindr/FinFindrServer/bin/Debug/net8.0/DotNetEnv.dll
 /Users/maxmartin/projects/FinFindr/FinFindrServer/bin/Debug/net8.0/Sprache.dll
+/Users/maxmartin/projects/FinFindr/FinFindrServer/bin/Debug/net8.0/aiwrapper/bin/Debug/net8.0/appsettings.Development.json
+/Users/maxmartin/projects/FinFindr/FinFindrServer/bin/Debug/net8.0/aiwrapper/bin/Debug/net8.0/appsettings.json
+/Users/maxmartin/projects/FinFindr/FinFindrServer/bin/Debug/net8.0/aiwrapper/bin/Debug/net8.0/FinFindrServer.deps.json
+/Users/maxmartin/projects/FinFindr/FinFindrServer/bin/Debug/net8.0/aiwrapper/bin/Debug/net8.0/FinFindrServer.runtimeconfig.json

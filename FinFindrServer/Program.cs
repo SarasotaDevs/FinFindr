@@ -1,5 +1,4 @@
 using Microsoft.Extensions.DependencyInjection;
-using OpenAI;
 using DotNetEnv;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,7 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-AppConfig.AIConnectionServiceInjection(builder.Services);
+Startup.AppConfig(builder.Services);
 
 var app = builder.Build();
 
@@ -21,21 +20,20 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
 Env.Load();
 
 
-app.MapGet("/connectai", (AIService aiService) =>
+app.MapGet("/connectai", (OpenAIService openAIService) =>
 {
-    return aiService.ConnectAI();
+    return openAIService.Client;
 })
 .WithName("Connect AI")
 .WithOpenApi();
 
 
-app.MapGet("/getai", (AIService aiService) =>
+app.MapGet("/getai", (OpenAIService openAIService) =>
 {
-    return aiService.getAI();
+    return openAIService.LogTest();
 })
 .WithName("GetAI")
 .WithOpenApi();
