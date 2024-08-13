@@ -1,18 +1,14 @@
-# My Awesome Project
+# FinFindr Server
 
-My Awesome Project is a simple tool that helps users manage tasks and to-dos efficiently. It provides a clean, easy-to-use interface and a variety of features to help you stay organized.
+FinFindr server that establishes the OpenAI connection
 
 ## Features
 
-- Add, edit, and delete tasks
-- Set due dates and reminders
-- Organize tasks by category
-- Mark tasks as completed
-- View your progress over time
+- Connect to OpenAI
 
 ## Installation
 
-To get started with My Awesome Project, follow these steps:
+To get started with FinFindr, follow these steps:
 
 1. **Clone the repository**:
    ```bash
