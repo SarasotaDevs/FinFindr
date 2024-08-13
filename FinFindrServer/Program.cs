@@ -1,5 +1,6 @@
 using Microsoft.Extensions.DependencyInjection;
 using OpenAI;
+using DotNetEnv;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,6 +22,8 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+Env.Load();
+
 
 app.MapGet("/connectai", (AIService aiService) =>
 {
@@ -28,5 +31,14 @@ app.MapGet("/connectai", (AIService aiService) =>
 })
 .WithName("Connect AI")
 .WithOpenApi();
+
+
+app.MapGet("/getai", (AIService aiService) =>
+{
+    return aiService.getAI();
+})
+.WithName("GetAI")
+.WithOpenApi();
+
 
 app.Run();

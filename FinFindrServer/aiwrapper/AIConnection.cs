@@ -1,25 +1,23 @@
 using OpenAI.Chat;
+using DotNetEnv;
 
-
-
-public interface IAIConnection
-
+public class AIConnection
 {
-    string ConnectAI();
-}
-public class AIConnection : IAIConnection
-{
-    public string ConnectAI()
+
+    private ChatClient client { get; set; }
+
+    public ChatClient Client => client;
+
+
     
-    {
+    public ChatClient connectClient() {
 
-        string key = "<add key>";
-        ChatClient client = new(model: "gpt-4o", key);
+        string key = Environment.GetEnvironmentVariable("MY_API_KEY");
 
-        ChatCompletion completion = client.CompleteChat("what are the membership reward benefits of the american express gold card, no verbose, just the numbers and location");
+        client = new(model: "gpt-4o", key);
 
-        Console.WriteLine(completion);
-
-        return "AI Connected";
+        return client;
     }
+
+
 }
