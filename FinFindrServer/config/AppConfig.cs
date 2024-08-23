@@ -1,10 +1,14 @@
-public static class Startup {
 
+public static class Startup {
      public static void Configure(WebApplicationBuilder builder) {
 
         // Configure singletons, and application app instances on runtime
+
+
+
         ServiceConfig(builder.Services);
 
+     
 
         var app = builder.Build();
 
@@ -23,6 +27,7 @@ public static class Startup {
         app.UseHttpsRedirection();
         app.UseAuthorization();
 
+        app.UseAuthentication();
 
 
 

@@ -41,3 +41,12 @@
 /Users/maxmartin/projects/FinFindr/FinFindrServer/bin/Debug/net8.0/services/aiwrapper/bin/Debug/net8.0/appsettings.json
 /Users/maxmartin/projects/FinFindr/FinFindrServer/bin/Debug/net8.0/services/aiwrapper/bin/Debug/net8.0/FinFindrServer.deps.json
 /Users/maxmartin/projects/FinFindr/FinFindrServer/bin/Debug/net8.0/services/aiwrapper/bin/Debug/net8.0/FinFindrServer.runtimeconfig.json
+/Users/maxmartin/projects/FinFindr/FinFindrServer/bin/Debug/net8.0/Auth0.AspNetCore.Authentication.dll
+/Users/maxmartin/projects/FinFindr/FinFindrServer/bin/Debug/net8.0/Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
+/Users/maxmartin/projects/FinFindr/FinFindrServer/bin/Debug/net8.0/Microsoft.IdentityModel.Abstractions.dll
+/Users/maxmartin/projects/FinFindr/FinFindrServer/bin/Debug/net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/maxmartin/projects/FinFindr/FinFindrServer/bin/Debug/net8.0/Microsoft.IdentityModel.Logging.dll
+/Users/maxmartin/projects/FinFindr/FinFindrServer/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.dll
+/Users/maxmartin/projects/FinFindr/FinFindrServer/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/Users/maxmartin/projects/FinFindr/FinFindrServer/bin/Debug/net8.0/Microsoft.IdentityModel.Tokens.dll
+/Users/maxmartin/projects/FinFindr/FinFindrServer/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll

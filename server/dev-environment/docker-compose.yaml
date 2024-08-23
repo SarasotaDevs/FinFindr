@@ -7,15 +7,14 @@ services:
     ports:
       - "8080:8080"
   oracle-db:
-    image: container-registry.oracle.com/database/free:latest
-    container_name: oracle-db
-    environment:
-      - ORACLE_PWD=admin12345
+    image: oracleinanutshell/oracle-xe-11g
+    container_name: oracle-xe-11g
+    platform: linux/amd64
     ports:
-      - "1521:1521"  # Oracle database port
-      - "5500:5500"  # Oracle EM Express port
-    volumes:
-      - oracle-data:/opt/oracle/oradata  # Persistent data storage
+      - "1521:1521"
+    environment:
+      - ORACLE_PASSWORD=oracle
+    restart: unless-stopped
 
 volumes:
   oracle-data:
