@@ -45,6 +45,12 @@ public static class Startup {
             return new OpenAIService(key);
         }
             );
+
+      services.AddSingleton<DatabaseRepository>(sp => {
+            string key = Environment.GetEnvironmentVariable("CONNECTION_STRING") ?? string.Empty; 
+            return new DatabaseRepository(key);
+        }
+            );
         
 
     }

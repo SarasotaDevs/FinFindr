@@ -6,15 +6,14 @@ services:
     container_name: finfindr-server
     ports:
       - "8080:8080"
-  oracle-db:
-    image: oracleinanutshell/oracle-xe-11g
-    container_name: oracle-xe-11g
-    platform: linux/amd64
-    ports:
-      - "1521:1521"
+  postgres:
+    image: postgres
+    container_name: finfindr-db
     environment:
-      - ORACLE_PASSWORD=oracle
-    restart: unless-stopped
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin123
+      POSTGRES_DB: finfindrdb
+    ports:
+      - "5432:5432"
 
-volumes:
-  oracle-data:
+
