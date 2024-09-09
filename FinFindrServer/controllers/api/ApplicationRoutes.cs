@@ -34,13 +34,20 @@ public static class ApplicationRoutes {
 
                 client.MapPost("/signup", (UserService userService, User user) =>
                 {
-                    // string res = userService.addUser(user.name, user.email);
-                    string res = "";
-                    Console.WriteLine(user.name);
+                    string res = userService.addUser(user.name, user.email);
                     return res;
                 })
                 .WithName("Sign Up")
                 .WithOpenApi();
+
+                client.MapGet("/allusers", (UserService userService) =>
+                {
+                    List<string> res = userService.getAllUsers();
+                    return res;
+                })
+                .WithName("Gets All Users")
+                .WithOpenApi();
+
 
                 client.MapGet("/allusers", (UserService userService) =>
                 {
@@ -64,12 +71,4 @@ public static class ApplicationRoutes {
 }
      
 
-}  
-
-
-    public class User
-{
-    public required string name { get; set; }
-    public required string email { get; set; }
-
-}
+} 
