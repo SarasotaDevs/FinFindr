@@ -1,4 +1,4 @@
-version: '3.8' 
+version: '3.8'
 
 services:
   finfindr-server:
@@ -6,13 +6,23 @@ services:
     container_name: finfindr-server
     ports:
       - "8080:8080"
+    depends_on:
+      - postgres
+    networks:
+      - finfindr-network
+
   postgres:
     image: postgres
-    container_name: finfindr-db
+    container_name: finfindrdb
     environment:
-      POSTGRES_USER: admin
+      POSTGRES_USER: postgres
       POSTGRES_PASSWORD: admin
       POSTGRES_DB: finfindrdb
-    network_mode: host
+    ports:
+      - "5432:5432"
+    networks:
+      - finfindr-network
 
-
+networks:
+  finfindr-network:
+    driver: bridge

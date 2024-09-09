@@ -34,8 +34,8 @@ public static class ApplicationRoutes {
 
                 client.MapGet("/signup", (DatabaseRepository databaseRepository) =>
                 {
-                    databaseRepository.addUser("Max Martin", "maxmartin54321@gmail.com");
-                    return "Success";
+                    string res = databaseRepository.addUser("Max Martin", "maxmartin54321@gmail.com");
+                    return res;
                 })
                 .WithName("Sign Up")
                 .WithOpenApi();
@@ -43,10 +43,18 @@ public static class ApplicationRoutes {
 
                 client.MapGet("/data", (DatabaseRepository databaseRepository) =>
                 {
-                    databaseRepository.getData();
-                    return "Success";
+                    List<string> res = databaseRepository.getAllUsers();
+                    return res;
                 })
                 .WithName("Data")
+                .WithOpenApi();
+
+                client.MapGet("/delete", (DatabaseRepository databaseRepository) =>
+                {
+                    List<string> res = databaseRepository.deleteUser("maxmartin54321@gmail.com");
+                    return res;
+                })
+                .WithName("delete")
                 .WithOpenApi();
         }
 
