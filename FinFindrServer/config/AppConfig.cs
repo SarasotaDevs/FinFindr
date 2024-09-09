@@ -51,6 +51,8 @@ public static class Startup {
             return new DatabaseRepository(key);
         }
             );
+
+    services.AddSingleton<UserService>();
         
 
     }

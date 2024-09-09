@@ -32,29 +32,22 @@ public static class ApplicationRoutes {
               public static void ConfigureAuthenicationRoutes(WebApplication app) {
                var client = app.MapGroup("/api/auth");
 
-                client.MapGet("/signup", (DatabaseRepository databaseRepository) =>
+                client.MapPost("/signup", (UserService userService, User user) =>
                 {
-                    string res = databaseRepository.addUser("Max Martin", "maxmartin54321@gmail.com");
+                    // string res = userService.addUser(user.name, user.email);
+                    string res = "";
+                    Console.WriteLine(user.name);
                     return res;
                 })
                 .WithName("Sign Up")
                 .WithOpenApi();
 
-
-                client.MapGet("/data", (DatabaseRepository databaseRepository) =>
+                client.MapGet("/allusers", (UserService userService) =>
                 {
-                    List<string> res = databaseRepository.getAllUsers();
+                    List<string> res = userService.getAllUsers();
                     return res;
                 })
-                .WithName("Data")
-                .WithOpenApi();
-
-                client.MapGet("/delete", (DatabaseRepository databaseRepository) =>
-                {
-                    List<string> res = databaseRepository.deleteUser("maxmartin54321@gmail.com");
-                    return res;
-                })
-                .WithName("delete")
+                .WithName("Gets All Users")
                 .WithOpenApi();
         }
 
@@ -72,3 +65,11 @@ public static class ApplicationRoutes {
      
 
 }  
+
+
+    public class User
+{
+    public required string name { get; set; }
+    public required string email { get; set; }
+
+}
