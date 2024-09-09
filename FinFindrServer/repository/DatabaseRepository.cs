@@ -1,4 +1,5 @@
-using Microsoft.Data.Sqlite;
+using Npgsql;
+
 
 public class DatabaseRepository 
 {
@@ -8,64 +9,65 @@ public class DatabaseRepository
 
     public DatabaseRepository(string connString) {
         _connString = connString;
+
     }
 
 
-    public void addUser(string name, string email)
+    public void addUser(string name, string email) {
+    using (var connection = new NpgsqlConnection(_connString))
     {
-        using (var connection = new SqliteConnection(_connString))
+        // Open the connection
+        connection.Open();
+
+        // Ensure the connection is opened before executing the command
+        if (connection.State == System.Data.ConnectionState.Open)
         {
-            connection.Open();
-
-            string insertQuery = "INSERT INTO users (name, email) VALUES (@Name, @Email)";
-            using (var command = new SqliteCommand(insertQuery, connection))
-            {
-                command.Parameters.AddWithValue("@Name", name);
-                command.Parameters.AddWithValue("@Email", email);
-                command.ExecuteNonQuery();
-            }
-        }
-    }
-
-
-    public void getData()
-    {
-        using (var connection = new SqliteConnection(_connString))
-        {
-            connection.Open();
-
-            string selectQuery = "SELECT * FROM users";
-            using (var command = new SqliteCommand(selectQuery, connection))
+            using (var command = new NpgsqlCommand("SELECT column FROM table", connection))
             {
                 using (var reader = command.ExecuteReader())
                 {
                     while (reader.Read())
                     {
-                        int id = reader.GetInt32(0);
-                        string name = reader.GetString(1);
-                        string email = reader.GetString(2);
-
-                        Console.WriteLine($"ID: {id}, Name: {name}, Email: {email}");
-                    }
-                }
-            }
-
-            string selectByIdQuery = "SELECT * FROM users WHERE id = 1";
-            using (var command = new SqliteCommand(selectByIdQuery, connection))
-            {
-                using (var reader = command.ExecuteReader())
-                {
-                    if (reader.Read())
-                    {
-                        int id = reader.GetInt32(0);
-                        string name = reader.GetString(1);
-                        string email = reader.GetString(2);
-
-                        Console.WriteLine($"Element with ID 1: ID: {id}, Name: {name}, Email: {email}");
+                        Console.WriteLine(reader.GetString(0)); // Process the result
                     }
                 }
             }
         }
+        else
+        {
+            Console.WriteLine("Connection failed to open.");
+        }
+    }
     }
 
+
+    public void getData() {
+    using (var connection = new NpgsqlConnection(_connString))
+    {
+        // Open the connection
+        connection.Open();
+
+        // Ensure the connection is opened before executing the command
+        if (connection.State == System.Data.ConnectionState.Open)
+        {
+            using (var command = new NpgsqlCommand("SELECT column FROM table", connection))
+            {
+                using (var reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Console.WriteLine(reader.GetString(0)); // Process the result
+                    }
+                }
+            }
+        }
+        else
+        {
+            Console.WriteLine("Connection failed to open.");
+        }
+    }
+
+
+
+}
 }

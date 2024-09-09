@@ -11,9 +11,8 @@ services:
     container_name: finfindr-db
     environment:
       POSTGRES_USER: admin
-      POSTGRES_PASSWORD: admin123
+      POSTGRES_PASSWORD: admin
       POSTGRES_DB: finfindrdb
-    ports:
-      - "5432:5432"
+    network_mode: host
 
 

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "pweAxOreO+A=",
+  "dgSpecHash": "NMIUvDMiLcw=",
   "success": true,
   "projectFilePath": "/Users/maxmartin/projects/FinFindr/FinFindrServer/FinFindrServer.csproj",
   "expectedPackageFiles": [
@@ -20,6 +20,7 @@
     "/Users/maxmartin/.nuget/packages/microsoft.extensions.configuration.abstractions/1.1.2/microsoft.extensions.configuration.abstractions.1.1.2.nupkg.sha512",
     "/Users/maxmartin/.nuget/packages/microsoft.extensions.dependencyinjection/8.0.0/microsoft.extensions.dependencyinjection.8.0.0.nupkg.sha512",
     "/Users/maxmartin/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.0/microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "/Users/maxmartin/.nuget/packages/microsoft.extensions.logging.abstractions/8.0.0/microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
     "/Users/maxmartin/.nuget/packages/microsoft.extensions.primitives/1.1.1/microsoft.extensions.primitives.1.1.1.nupkg.sha512",
     "/Users/maxmartin/.nuget/packages/microsoft.identitymodel.abstractions/7.1.2/microsoft.identitymodel.abstractions.7.1.2.nupkg.sha512",
     "/Users/maxmartin/.nuget/packages/microsoft.identitymodel.jsonwebtokens/7.1.2/microsoft.identitymodel.jsonwebtokens.7.1.2.nupkg.sha512",
@@ -33,6 +34,7 @@
     "/Users/maxmartin/.nuget/packages/microsoft.win32.primitives/4.3.0/microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "/Users/maxmartin/.nuget/packages/mysql.data/9.0.0/mysql.data.9.0.0.nupkg.sha512",
     "/Users/maxmartin/.nuget/packages/netstandard.library/1.6.1/netstandard.library.1.6.1.nupkg.sha512",
+    "/Users/maxmartin/.nuget/packages/npgsql/8.0.3/npgsql.8.0.3.nupkg.sha512",
     "/Users/maxmartin/.nuget/packages/openai/2.0.0-beta.8/openai.2.0.0-beta.8.nupkg.sha512",
     "/Users/maxmartin/.nuget/packages/runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl/4.3.2/runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
     "/Users/maxmartin/.nuget/packages/runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl/4.3.2/runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
