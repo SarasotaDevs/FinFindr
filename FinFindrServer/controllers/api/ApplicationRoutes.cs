@@ -34,7 +34,7 @@ public static class ApplicationRoutes {
 
                 client.MapPost("/signup", (UserService userService, User user) =>
                 {
-                    string res = userService.addUser(user.name, user.email);
+                    string res = userService.addUser(user);
                     return res;
                 })
                 .WithName("Sign Up")
@@ -49,13 +49,14 @@ public static class ApplicationRoutes {
                 .WithOpenApi();
 
 
-                client.MapGet("/allusers", (UserService userService) =>
-                {
-                    List<string> res = userService.getAllUsers();
-                    return res;
-                })
-                .WithName("Gets All Users")
-                .WithOpenApi();
+        //         client.MapGet("/delete", (UserService userService, User user) =>
+        //         {
+        //             List<string> res = userService.deleteUser(user);
+        //             return res;
+        //         })
+        //         .WithName("Gets All Users")
+        //         .WithOpenApi();
+        // 
         }
 
 

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FinFindrServer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6849d257b70adc61d1b5a670e8c7b316c1e521c0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6c8ac4ca4791aa81e31543bb15144552dc93853e")]
 [assembly: System.Reflection.AssemblyProductAttribute("FinFindrServer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FinFindrServer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

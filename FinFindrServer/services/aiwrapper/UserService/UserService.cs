@@ -9,12 +9,12 @@ public class UserService
     }
 
 
-    public string addUser(string name, string email)
+    public string addUser(User user)
     {
 
-            string insertQuery = $"INSERT INTO users (name, email) VALUES ('{name}', '{email}')";
+            string insertQuery = $"INSERT INTO users (name, email) VALUES ('{user.name}', '{user.email}')";
             _repository.executeQuery(insertQuery);
-            return $"Name: {name} added\nEmail: {email} added";
+            return $"Name: {user.name} added\nEmail: {user.email} added";
     }
 
     public List<string> getAllUsers()
