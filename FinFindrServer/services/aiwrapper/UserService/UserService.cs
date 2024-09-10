@@ -24,6 +24,20 @@ public class UserService
     return users;
     }
 
+    public string deleteUser(User user)
+    {
+        string selectQuery = $"SELECT COUNT(*) FROM users WHERE email = '{user.email}'";
+        int count = _repository.executeQuery(selectQuery).Count;
+        if (count == 0)
+        {
+            return $"User with email {user.email} does not exist in the database.";
+        }
+
+        string deleteQuery = $"DELETE FROM users WHERE email = '{user.email}'";
+        _repository.executeQuery(deleteQuery);
+        return $"User with email {user.email} has been deleted from the database.";
+    }
+
 }
 
 

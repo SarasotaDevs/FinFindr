@@ -48,6 +48,14 @@ public static class ApplicationRoutes {
                 .WithName("Gets All Users")
                 .WithOpenApi();
 
+                client.MapPost("/deleteuser", (UserService userService, User user) =>
+                {
+                    string res = userService.deleteUser(user);
+                    return res;
+                })
+                .WithName("Deletes User")
+                .WithOpenApi();
+
 
         //         client.MapGet("/delete", (UserService userService, User user) =>
         //         {
