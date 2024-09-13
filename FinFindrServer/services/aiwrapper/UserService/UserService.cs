@@ -14,7 +14,8 @@ public class UserService
 
             string insertQuery = $"INSERT INTO users (name, email) VALUES ('{user.name}', '{user.email}')";
             _repository.executeQuery(insertQuery);
-            return $"Name: {user.name} added\nEmail: {user.email} added";
+            string response = $"Name: {user.name} added\nEmail: {user.email} added";
+            return response
     }
 
     public List<string> getAllUsers()
@@ -30,12 +31,14 @@ public class UserService
         int count = _repository.executeQuery(selectQuery).Count;
         if (count == 0)
         {
-            return $"User with email {user.email} does not exist in the database.";
+            string response = $"User with email {user.email} does not exist in the database.";
+            return response
         }
 
         string deleteQuery = $"DELETE FROM users WHERE email = '{user.email}'";
         _repository.executeQuery(deleteQuery);
-        return $"User with email {user.email} has been deleted from the database.";
+        string response =  $"User with email {user.email} has been deleted from the database.";
+        return response
     }
 
 }
