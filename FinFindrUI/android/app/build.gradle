@@ -111,11 +111,14 @@ android {
 
     namespace "com.finfindrui"
     defaultConfig {
-        applicationId "com.finfindrui"
+// @generated begin react-native-auth0-manifest-placeholder - expo prebuild (DO NOT MODIFY) sync-bc56caf22997ad2018e08b00c05e9192e6d76996
+manifestPlaceholders = [auth0Domain: "dev-2gr8ul7zx78jgr6l.us.auth0.com", auth0Scheme: "com.finfindr.finfindrui.auth0"]
+// @generated end react-native-auth0-manifest-placeholder
+        applicationId 'com.finfindr.finfindrui'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.0"
     }
     signingConfigs {
         debug {

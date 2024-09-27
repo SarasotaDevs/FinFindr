@@ -7,8 +7,8 @@ import Wallet from './pages/Wallet/Wallet';
 import Navbar from './components/Navbar';
 import { useWindowDimensions } from 'react-native';
 import Footer from './components/Footer';
-import {Auth0Provider} from 'react-native-auth0';
-import authCredentials from './auth/Auth0';
+import {useAuth0, Auth0Provider} from 'react-native-auth0';
+import authCredentials from './auth/Auth0'
 import { UserAuthProvider } from './context/UserAuth';
 import Profile from './pages/Profile/Profile';
 
@@ -30,9 +30,7 @@ const App = () => {
 
   const { width } = useWindowDimensions();
   const isMobile = width < 600; // Adjust breakpoint as needed
-
   return (
-    <Auth0Provider domain={authCredentials.domain} clientId={authCredentials.clientId}>
      <UserAuthProvider>
           <NavigationContainer>
           <PaperProvider theme={theme}>
@@ -47,9 +45,7 @@ const App = () => {
           {isMobile && <Footer />}
           </PaperProvider>
         </NavigationContainer>
-      </UserAuthProvider>
-    </Auth0Provider>
-   
+      </UserAuthProvider>   
   );
 }
 
