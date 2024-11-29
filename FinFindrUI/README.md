@@ -11,3 +11,8 @@ A cross-platform financial application built with React Native and Expo.
 ## Development Setup
 
 1. Install dependencies:
+
+Go into src
+
+npm run web
+npm run ios
