@@ -13,7 +13,9 @@ export async function createUser(userData) {
 export async function test() {
     try {
       console.log(API_URL);
-      const response = await axios.get(`${API_URL}/test`);
+      const userId = "123";
+      const response = await axios.get(`${API_URL}/api/client/getfinance/${userId}`);
+      console.log(response.data);
       return response.data;
     } catch (error) {
       console.error('Error creating user:', error);
