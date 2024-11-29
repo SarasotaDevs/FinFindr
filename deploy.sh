@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define your variables
-S3_BUCKET_NAME="www.finfindr.com"
+S3_BUCKET_NAME="www.finfindr.org"
 BUILD_DIR="FinFindrUI/"
 AWS_REGION="us-east-2" # e.g., us-east-1
 
