@@ -1,10 +1,14 @@
-public static class Startup {
 
+public static class Startup {
      public static void Configure(WebApplicationBuilder builder) {
 
         // Configure singletons, and application app instances on runtime
+
+
+
         ServiceConfig(builder.Services);
 
+     
 
         var app = builder.Build();
 
@@ -23,6 +27,7 @@ public static class Startup {
         app.UseHttpsRedirection();
         app.UseAuthorization();
 
+        app.UseAuthentication();
 
 
 
@@ -40,6 +45,14 @@ public static class Startup {
             return new OpenAIService(key);
         }
             );
+
+      services.AddSingleton<DatabaseRepository>(sp => {
+            string key = Environment.GetEnvironmentVariable("CONNECTION_STRING") ?? string.Empty; 
+            return new DatabaseRepository(key);
+        }
+            );
+
+    services.AddSingleton<UserService>();
         
 
     }

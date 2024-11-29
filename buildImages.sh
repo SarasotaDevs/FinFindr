@@ -1,5 +1,3 @@
-cd server
-
-cd finfindr-server
+cd FinFindrServer
 
 docker build -t finfindr-server .

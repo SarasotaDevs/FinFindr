@@ -14,6 +14,7 @@ public static class ApplicationRoutes {
 
                 client.MapGet("/getai", (OpenAIService openAIService) =>
                 {
+
                     return openAIService.LogTest("Say 'this is a test.'");
                 })
                 .WithName("GetAI")
@@ -28,8 +29,48 @@ public static class ApplicationRoutes {
                 .WithOpenApi();
         }
 
+              public static void ConfigureAuthenicationRoutes(WebApplication app) {
+               var client = app.MapGroup("/api/auth");
+
+                client.MapPost("/signup", (UserService userService, User user) =>
+                {
+                    string res = userService.addUser(user);
+                    return res;
+                })
+                .WithName("Sign Up")
+                .WithOpenApi();
+
+                client.MapGet("/allusers", (UserService userService) =>
+                {
+                    List<string> res = userService.getAllUsers();
+                    return res;
+                })
+                .WithName("Gets All Users")
+                .WithOpenApi();
+
+                client.MapPost("/deleteuser", (UserService userService, User user) =>
+                {
+                    string res = userService.deleteUser(user);
+                    return res;
+                })
+                .WithName("Deletes User")
+                .WithOpenApi();
+
+
+        //         client.MapGet("/delete", (UserService userService, User user) =>
+        //         {
+        //             List<string> res = userService.deleteUser(user);
+        //             return res;
+        //         })
+        //         .WithName("Gets All Users")
+        //         .WithOpenApi();
+        // 
+        }
+
+
         public static void ConfigureRoutes(WebApplication app) {
             ConfigureClientRoutes(app);
+            ConfigureAuthenicationRoutes(app);
         }
 
 
@@ -39,4 +80,4 @@ public static class ApplicationRoutes {
 }
      
 
-}  
+} 
